@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Aventuras Aprendiendo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">★</span>
+          <span>Mini Aventuras Aprendiendo</span>
+        </div>
+        <button id="restart-btn" class="secondary-btn hidden">Volver al inicio</button>
+      </header>
+
+      <main class="game-panel">
+        <section id="start-screen" class="screen active">
+          <div class="hero-card">
+            <div class="hero-badge">🎈 ¡A jugar!</div>
+            <h1>Mini Aventuras Aprendiendo</h1>
+            <p>
+              Un juego divertido para aprender con colores, números, letras, formas y matemáticas.
+            </p>
+
+            <div class="age-picker">
+              <h2>Elige tu nivel</h2>
+              <div class="age-buttons">
+                <button class="age-btn" data-age="young">3 a 5 años</button>
+                <button class="age-btn" data-age="middle">6 a 8 años</button>
+                <button class="age-btn" data-age="older">9 a 10 años</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="game-screen" class="screen">
+          <div class="status-bar">
+            <div class="status-block">
+              <span class="label">Nivel</span>
+              <strong id="level-label">-</strong>
+            </div>
+            <div class="status-block">
+              <span class="label">Puntaje</span>
+              <strong id="score">0</strong>
+            </div>
+            <div class="status-block">
+              <span class="label">Estrellas</span>
+              <strong id="stars">⭐</strong>
+            </div>
+          </div>
+
+          <div class="quest-card">
+            <div class="question-bubble" id="question-text">¿Listo para empezar?</div>
+            <div id="options" class="options"></div>
+            <div id="feedback" class="feedback" aria-live="polite"></div>
+            <button id="next-btn" class="primary-btn hidden">Siguiente reto</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
